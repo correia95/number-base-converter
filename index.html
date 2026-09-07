@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#3b5bdb" />
+
+    <title>Number Base Converter — binary, octal, decimal, hex</title>
+    <meta
+      name="description"
+      content="Convert between binary, octal, decimal and hexadecimal. Type in any field and the rest update live, flip individual bits, and read the value as a signed two's-complement integer at 8, 16, 32 or 64 bits. Arbitrary precision. Runs in your browser."
+    />
+    <link rel="canonical" href="https://number-base-converter.correia95.workers.dev/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Number Base Converter" />
+    <meta property="og:description" content="Binary / octal / decimal / hex, live in every field, with a clickable bit grid and two's-complement at 8–64 bits." />
+    <meta property="og:url" content="https://number-base-converter.correia95.workers.dev/" />
+    <meta property="og:image" content="https://number-base-converter.correia95.workers.dev/og.svg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Number Base Converter" />
+    <meta name="twitter:description" content="Binary / octal / decimal / hex, live in every field, with a clickable bit grid and two's-complement." />
+    <meta name="twitter:image" content="https://number-base-converter.correia95.workers.dev/og.svg" />
+
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Number Base Converter",
+        "url": "https://number-base-converter.correia95.workers.dev/",
+        "applicationCategory": "DeveloperApplication",
+        "operatingSystem": "Any",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "description": "Convert between binary, octal, decimal and hexadecimal with a live linked set of fields, a clickable bit grid and two's-complement interpretation, entirely in the browser."
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How do I convert hex to decimal?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Type the hex value into the Hex field. The Decimal field updates immediately, along with binary and octal. A leading 0x is accepted and ignored."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I convert decimal to binary?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Type the number into the Decimal field and read the Binary field. You can also click bits in the grid to toggle them and watch every base change."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is two's complement?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "It is how computers store signed integers. The most significant bit carries the sign, and negative one is all ones. The converter shows the signed value for the bit width you pick: 8, 16, 32 or 64 bits."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can it handle numbers bigger than 64 bits?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Conversion uses arbitrary-precision integers, so very large values convert exactly. The bit grid shows the low bits for the width you have selected."
+            }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <noscript>
+      <p style="text-align: center; padding: 20px">
+        This number base converter needs JavaScript. It converts between binary, octal, decimal and
+        hexadecimal with linked fields, a clickable bit grid and two's-complement interpretation at
+        8 to 64 bits.
+      </p>
+    </noscript>
+  </body>
+</html>

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://number-base-converter.correia95.workers.dev/sitemap.xml
