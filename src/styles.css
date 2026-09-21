@@ -92,3 +92,9 @@ header h1 { font-size: clamp(1.5rem, 4.5vw, 2rem); margin: 0 0 6px; letter-spaci
   .fields, .grouped { grid-template-columns: 1fr; }
   .bitgrid { --cols: 8 !important; }
 }
+
+/* a11y-contrast-fixes (auto, WCAG AA 4.5:1) */
+@media (prefers-color-scheme: dark) {
+  .bit.one { color: #0b0b0f; }
+  .share { color: #0b0b0f; }
+}
